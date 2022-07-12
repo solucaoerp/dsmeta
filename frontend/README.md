@@ -16,3 +16,7 @@ yarn dev
 http://localhost:3000/
 
 ## Ferramentas
+VS Code
+- IntelliCode (Microsoft)
+- ESLint (Microsoft)
+- JSX HTML <tags/> (Angelo Rafael)
