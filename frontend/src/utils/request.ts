@@ -2,7 +2,10 @@
     Arquivo de configuração para a rota base de requisição aos Endpoints
 */
 
-const BASE_URL_TEST = "http://localhost:8080"
+const HOST = "http://localhost:";
+const PORT = 8080;
+const BASE_URL_TEST = HOST + PORT
+
 export const BASE_URL = import.meta.env.VITE_BACKEND_URL ?? BASE_URL_TEST;
 
 /*
