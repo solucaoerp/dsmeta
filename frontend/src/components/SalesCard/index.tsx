@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { BASE_URL } from "../../utils/request";
 
 import NotificationButton from '../NotificationButton';
 
@@ -16,12 +17,17 @@ function SalesCard() {
     const [maxDate, setMaxDate] = useState(max);
 
     useEffect(() => {
-        //console.log("TEST");
-        axios.get("http://localhost:8080/sales")
+
+        /* 
+            console.log() - utilizado para fins de debug/testes
+            console.log("TEST");
+        */
+
+        axios.get(`${BASE_URL}/sales`)
             .then(response => {
-                console.log(response.data) // exibe na tela os dados da resposta
+                console.log(response.data) /* exibe no console do navegador, o retorno da requisição */
             });
-    }, [])
+    }, []);
 
 
     return (
